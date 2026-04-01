@@ -6,83 +6,88 @@
     <title>NOAS（業務・販売連携ネクサス） | ビジネスの意志決定を、実行へと繋ぐAIプラットフォーム</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; }
         .nexus-bg { background-color: #0f172a; background-image: radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.5) 0, transparent 50%), radial-gradient(at 100% 100%, rgba(79, 70, 229, 0.3) 0, transparent 50%); }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .feature-card:hover { transform: translateY(-5px); border-color: #4f46e5; }
     </style>
 </head>
 <body class="bg-white text-slate-900 leading-relaxed">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex flex-col">
-                <span class="text-2xl font-black text-slate-900 tracking-tight">NOAS</span>
-                <span class="text-[10px] font-bold text-indigo-600 tracking-widest uppercase -mt-1">Nexus of Operations and Sales</span>
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="NOAS Logo" class="h-10 w-10 rounded-lg shadow-sm">
+                <div class="flex flex-col">
+                    <span class="text-xl font-black text-slate-900 tracking-tight leading-none">NOAS</span>
+                    <span class="text-[9px] font-bold text-indigo-600 tracking-widest uppercase mt-1 leading-none">Nexus of Operations and Sales</span>
+                </div>
             </div>
             <div class="hidden md:flex items-center gap-10 text-sm font-semibold text-slate-500">
                 <a href="#concept" class="hover:text-indigo-600 transition-colors">コンセプト</a>
                 <a href="#solutions" class="hover:text-indigo-600 transition-colors">ソリューション</a>
                 <a href="#reliability" class="hover:text-indigo-600 transition-colors">信頼性</a>
-                <a href="#contact" class="bg-slate-900 text-white px-6 py-3 rounded-full hover:bg-indigo-600 transition-all">お問い合わせ</a>
+                <a href="#contact" class="bg-slate-900 text-white px-6 py-3 rounded-full hover:bg-indigo-600 transition-all shadow-md">お問い合わせ</a>
             </div>
         </div>
     </nav>
 
     <section class="nexus-bg text-white pt-48 pb-32 px-6">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <div class="inline-block px-4 py-1.5 rounded-full border border-indigo-500/30 text-indigo-400 text-xs font-bold mb-6 tracking-widest uppercase">New Release 2026</div>
-                <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="animate-fade-in">
+                <div class="inline-block px-4 py-1.5 rounded-full border border-indigo-500/30 text-indigo-400 text-xs font-bold mb-8 tracking-widest uppercase">New Release 2026</div>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.1]">
                     「話したこと」を<br><span class="text-indigo-400">ビジネスの資産</span>へ。
                 </h1>
                 <p class="text-xl text-slate-300 mb-10 leading-relaxed max-w-xl">
-                    商談の熱量をそのままに、要約、タスク、発注、そしてインボイス対応の書類作成までをAIが自動化。業務と販売を強固に連携（ネクサス）させる次世代プラットフォーム「NOAS」。
+                    商談の熱量をそのままに、要約、タスク抽出、発注管理、そしてインボイス対応の書類作成までをAIが自動化。業務（Operations）と販売（Sales）を強固に連携させる統合プラットフォーム。
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#contact" class="bg-indigo-600 px-8 py-4 rounded-xl font-bold hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20">無料デモを予約する</a>
-                    <a href="#solutions" class="bg-slate-800/50 px-8 py-4 rounded-xl font-bold border border-slate-700 hover:bg-slate-700 transition-all">機能を詳しく見る</a>
+                    <a href="#contact" class="bg-indigo-600 px-10 py-5 rounded-xl font-bold text-lg hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20">無料デモを予約する</a>
                 </div>
             </div>
             <div class="relative hidden lg:block">
-                <div class="glass p-8 rounded-3xl relative z-10">
-                    <div class="flex items-center gap-4 mb-6 border-b border-white/10 pb-4">
-                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                        <div class="text-xs text-slate-400 font-mono ml-auto tracking-widest">NEXUS_ENGINE_ACTIVE</div>
-                    </div>
-                    <div class="space-y-4 font-mono text-sm text-indigo-200">
-                        <p class="opacity-50">> Analyzing meeting audio...</p>
-                        <p class="text-white">✓ Summary generated</p>
-                        <p class="text-white">✓ 4 Action items identified</p>
-                        <p class="text-white">✓ Purchase order draft created (Invoice compliant)</p>
-                        <p class="text-indigo-400 mt-6 font-bold tracking-tighter text-lg">Sales and Operations Synced.</p>
+                <div class="glass p-12 rounded-[3rem] relative z-10 flex flex-col items-center border border-white/20">
+                    <img src="logo.png" alt="NOAS Identity" class="w-32 h-32 rounded-3xl shadow-2xl mb-10 border border-white/30 p-1 bg-white/5">
+                    <div class="space-y-4 font-mono text-center text-sm text-indigo-200">
+                        <p class="text-white font-bold tracking-widest">NEXUS_ENGINE_ACTIVE</p>
+                        <p class="opacity-60 text-xs italic">Synchronizing Sales & Operations Data...</p>
+                        <div class="flex justify-center gap-2 mt-4">
+                            <div class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></div>
+                            <div class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse delay-75"></div>
+                            <div class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse delay-150"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="absolute -top-10 -right-10 w-64 h-64 bg-indigo-600 rounded-full blur-[120px] opacity-20"></div>
+                <div class="absolute -top-20 -right-20 w-80 h-80 bg-indigo-600 rounded-full blur-[150px] opacity-20"></div>
             </div>
         </div>
     </section>
 
     <section id="concept" class="py-32 px-6 bg-white">
         <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8 text-slate-900 tracking-tight">なぜ「連携（ネクサス）」が必要なのか？</h2>
-            <p class="text-lg text-slate-600 mb-16 leading-relaxed">
-                商談で決まったはずの内容が、実務（Operations）に伝わる過程で風化していませんか？<br>
+            <h2 class="text-4xl font-bold mb-10 text-slate-900 tracking-tight">なぜ「連携（ネクサス）」が必要なのか？</h2>
+            <p class="text-xl text-slate-600 mb-20 leading-relaxed max-w-3xl mx-auto">
+                商談で決まった内容が、その後の発注やタスク管理へ伝わる過程で風化していませんか？<br>
                 NOASは、フロントオフィスとバックオフィスの間にある「情報の断絶」をAIで解消します。
             </p>
             <div class="grid md:grid-cols-2 gap-12 text-left">
-                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100">
-                    <h3 class="font-bold text-xl mb-4 flex items-center gap-2">
-                        <span class="text-red-500">✕</span> 従来のフロー
+                <div class="p-10 rounded-3xl bg-slate-50 border border-slate-100">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 flex items-center justify-center bg-red-100 text-red-600 rounded-full text-sm">✕</span> 従来のフロー
                     </h3>
-                    <p class="text-sm text-slate-500">商談の録画を確認し、手動で議事録を作成。その後、別の管理システムへ転記し、さらにメールで発注を依頼する...。この過程でミスと遅延が発生します。</p>
+                    <p class="text-slate-500 leading-relaxed">
+                        商談後の議事録作成、管理システムへの転記、メールでの発注依頼。これらの分断された作業が、転記ミスや対応漏れ、業務の遅延を引き起こします。
+                    </p>
                 </div>
-                <div class="p-8 rounded-3xl bg-indigo-50 border border-indigo-100">
-                    <h3 class="font-bold text-xl mb-4 flex items-center gap-2 text-indigo-900">
-                        <span class="text-indigo-600 text-2xl font-black">○</span> NOASのフロー
+                <div class="p-10 rounded-3xl bg-indigo-50 border border-indigo-100">
+                    <h3 class="font-bold text-xl mb-6 flex items-center gap-3 text-indigo-900">
+                        <span class="w-8 h-8 flex items-center justify-center bg-indigo-600 text-white rounded-full text-sm font-black">○</span> NOASのフロー
                     </h3>
-                    <p class="text-sm text-slate-700 font-medium">AIが商談内容を即座に「行動データ」へ変換。要約、予算抽出、発注書作成、タスク管理までがひとつの流れとして完了します。</p>
+                    <p class="text-slate-700 font-medium leading-relaxed">
+                        AIが商談内容を即座に「構造化データ」へ変換。要約、予算抽出、発注書作成、アクション管理までが一つの流れとして完結し、組織の実行力を最大化します。
+                    </p>
                 </div>
             </div>
         </div>
@@ -90,44 +95,42 @@
 
     <section id="solutions" class="py-32 px-6 bg-slate-50">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-20">
-                <h2 class="text-4xl font-black text-slate-900 mb-4">Core Solutions</h2>
-                <p class="text-slate-500">ビジネスのあらゆるフェーズに、AIの洞察と自動化を。</p>
+            <div class="mb-20 text-center md:text-left">
+                <h2 class="text-4xl font-black text-slate-900 mb-6">Core Solutions</h2>
+                <p class="text-xl text-slate-500">意志決定を、瞬時に実行可能なデータと書類へ変換。</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="group bg-white p-10 rounded-3xl border border-slate-200 hover:border-indigo-600 transition-all duration-300 shadow-sm hover:shadow-xl">
-                    <div class="text-3xl mb-8">🚀</div>
+                <div class="feature-card group bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="text-4xl mb-8">🚀</div>
                     <h3 class="text-xl font-bold mb-4 group-hover:text-indigo-600 transition-colors">Sales Automation</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">商談の自動要約と、パーソナライズされたフォローアップメールの即時生成。営業の事務工数を削減し、成約率を最大化します。</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">商談の自動要約とお礼メールの即時生成。営業の事務負担を大幅に軽減し、成約率の向上に直結します。</p>
                 </div>
-                <div class="group bg-white p-10 rounded-3xl border border-slate-200 hover:border-indigo-600 transition-all duration-300 shadow-sm hover:shadow-xl">
-                    <div class="text-3xl mb-8">💎</div>
+                <div class="feature-card group bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="text-4xl mb-8">💎</div>
                     <h3 class="text-xl font-bold mb-4 group-hover:text-indigo-600 transition-colors">Financial Intelligence</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">会話から予算規模、支払条件、納期をAIが自動抽出。財務データの入力ミスを排除し、健全なキャッシュフロー管理を支援します。</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">会話から予算規模や支払条件をAIが自動抽出。財務データの入力ミスを排除し、正確な資金管理を支援します。</p>
                 </div>
-                <div class="group bg-white p-10 rounded-3xl border border-slate-200 hover:border-indigo-600 transition-all duration-300 shadow-sm hover:shadow-xl">
-                    <div class="text-3xl mb-8">🛡️</div>
+                <div class="feature-card group bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="text-4xl mb-8">🛡️</div>
                     <h3 class="text-xl font-bold mb-4 group-hover:text-indigo-600 transition-colors">Intelligent Procurement</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">適格請求書等保存方式（インボイス制度）に完全準拠。取引先の登録番号管理と、税率別書類作成を自動化します。</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">インボイス制度に完全準拠した発注書を自動起票。取引先の登録番号管理と税額計算を自動化します。</p>
                 </div>
-                <div class="group bg-white p-10 rounded-3xl border border-slate-200 hover:border-indigo-600 transition-all duration-300 shadow-sm hover:shadow-xl">
-                    <div class="text-3xl mb-8">🏢</div>
+                <div class="feature-card group bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="text-4xl mb-8">🏢</div>
                     <h3 class="text-xl font-bold mb-4 group-hover:text-indigo-600 transition-colors">Organization Hub</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">社内のあらゆる会議を検索可能な資産へ。ロール別の厳格な権限管理により、セキュアな情報共有環境を実現します。</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">組織全体の議事録を一元管理。厳格な権限管理により、社内のあらゆる会議を検索・活用可能な資産へと変換します。</p>
                 </div>
-                <div class="group bg-white p-10 rounded-3xl border border-slate-200 hover:border-indigo-600 transition-all duration-300 shadow-sm hover:shadow-xl">
-                    <div class="text-3xl mb-8">🎯</div>
+                <div class="feature-card group bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="text-4xl mb-8">🎯</div>
                     <h3 class="text-xl font-bold mb-4 group-hover:text-indigo-600 transition-colors">Action Tracking</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">決定事項の進捗をダッシュボードで一元管理。アクションの停滞をAIが検知し、プロジェクトの完遂を力強くサポートします。</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">決定事項の進捗をダッシュボードで可視化。タスクのステータスをリアルタイムに把握し、実行漏れを防止します。</p>
                 </div>
-                <div class="bg-slate-900 p-10 rounded-3xl text-white">
-                    <h3 class="text-xl font-bold mb-6">あらゆる業種に対応</h3>
-                    <p class="text-slate-400 text-sm mb-8 leading-relaxed">NOASは特定の業種に依存しません。商談が発生し、発注やタスク管理が必要なすべてのビジネスシーンで高いパフォーマンスを発揮します。</p>
-                    <div class="flex items-center gap-4">
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                        <span class="text-xs font-mono text-slate-500 uppercase tracking-widest">Enterprise Ready</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
+                <div class="bg-indigo-900 p-10 rounded-3xl text-white shadow-2xl flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-4">導入効果</h3>
+                    <p class="text-indigo-200 text-sm leading-relaxed mb-6">手入力作業の自動化により、関連業務の事務工数を最大80％以上削減することが可能です。</p>
+                    <div class="pt-4 border-t border-indigo-800">
+                        <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest leading-none">Enterprise Quality Assured</span>
                     </div>
                 </div>
             </div>
@@ -137,76 +140,73 @@
     <section id="reliability" class="py-32 px-6 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 items-center">
             <div class="md:w-1/2">
-                <h2 class="text-4xl font-black text-slate-900 mb-8 tracking-tight italic">Tech & Quality</h2>
+                <h2 class="text-4xl font-black text-slate-900 mb-10 tracking-tight italic">Technical Excellence</h2>
                 <div class="space-y-12">
                     <div>
-                        <h4 class="text-indigo-600 font-bold text-sm uppercase tracking-widest mb-2">High Efficiency</h4>
-                        <p class="text-slate-600 leading-relaxed">最新のNext.jsおよびBunを採用したアーキテクチャにより、大量のデータ処理においても圧倒的なレスポンス速度を提供します。</p>
+                        <h4 class="text-indigo-600 font-bold text-sm uppercase tracking-widest mb-3">Verified Performance</h4>
+                        <p class="text-slate-600 leading-relaxed text-lg">
+                            NOASは45項目の厳格な自動テストをクリアしています。商用利用に耐えうる堅牢な品質を、開発段階から保証しています。
+                        </p>
                     </div>
                     <div>
-                        <h4 class="text-indigo-600 font-bold text-sm uppercase tracking-widest mb-2">Validated Quality</h4>
-                        <p class="text-slate-600 leading-relaxed">45項目の厳格な自動テストをクリア。商用利用に耐えうる堅牢な品質を、開発段階から保証しています。</p>
+                        <h4 class="text-indigo-600 font-bold text-sm uppercase tracking-widest mb-3">Modern Infrastructure</h4>
+                        <p class="text-slate-600 leading-relaxed text-lg">
+                            Next.js 16 および高速ランタイム Bun を採用。大規模な商談データの処理においても、圧倒的なレスポンス速度と安全性を両立します。
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="md:w-1/2 relative">
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="aspect-square bg-slate-50 rounded-2xl flex flex-col items-center justify-center border border-slate-100">
-                        <span class="text-4xl font-black text-slate-900">Next.js</span>
-                        <span class="text-[10px] text-slate-400 mt-2 tracking-widest">FRAMEWORK</span>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="aspect-square bg-slate-50 rounded-3xl flex flex-col items-center justify-center border border-slate-200 shadow-sm">
+                        <span class="text-4xl font-black text-slate-900 leading-none">Next.js</span>
+                        <span class="text-[10px] text-slate-400 mt-4 tracking-widest font-bold">FRAMEWORK</span>
                     </div>
-                    <div class="aspect-square bg-slate-900 rounded-2xl flex flex-col items-center justify-center shadow-2xl">
-                        <span class="text-4xl font-black text-white">Bun</span>
-                        <span class="text-[10px] text-slate-500 mt-2 tracking-widest">RUNTIME</span>
+                    <div class="aspect-square bg-slate-900 rounded-3xl flex flex-col items-center justify-center shadow-2xl">
+                        <span class="text-4xl font-black text-white leading-none">Bun</span>
+                        <span class="text-[10px] text-slate-500 mt-4 tracking-widest font-bold">RUNTIME</span>
                     </div>
-                    <div class="aspect-square bg-indigo-600 rounded-2xl flex flex-col items-center justify-center shadow-2xl">
-                        <span class="text-4xl font-black text-white italic">45+</span>
-                        <span class="text-[10px] text-indigo-200 mt-2 tracking-widest">TEST PASS</span>
+                    <div class="aspect-square bg-indigo-600 rounded-3xl flex flex-col items-center justify-center shadow-2xl">
+                        <span class="text-5xl font-black text-white italic leading-none">45+</span>
+                        <span class="text-[10px] text-indigo-200 mt-4 tracking-widest font-bold uppercase">Test Pass</span>
                     </div>
-                    <div class="aspect-square bg-slate-50 rounded-2xl flex flex-col items-center justify-center border border-slate-100">
-                        <span class="text-4xl font-black text-slate-900">DX</span>
-                        <span class="text-[10px] text-slate-400 mt-2 tracking-widest">DRIVEN</span>
+                    <div class="aspect-square bg-slate-50 rounded-3xl flex flex-col items-center justify-center border border-slate-200 shadow-sm">
+                        <span class="text-4xl font-black text-slate-900 leading-none">AI</span>
+                        <span class="text-[10px] text-slate-400 mt-4 tracking-widest font-bold">NEXUS</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-32 px-6 bg-slate-50 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl font-black mb-6">Price</h2>
-            <p class="text-slate-500 mb-12">組織の規模や用途に合わせて最適なプランを個別にご提案いたします。<br>詳しくは下記よりお問い合わせください。</p>
-            <div class="inline-flex items-center gap-2 text-sm text-indigo-600 font-bold bg-white px-6 py-2 rounded-full border border-indigo-100 shadow-sm">
-                <span>※ IT導入補助金2026対象製品</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-32 px-6 bg-white">
+    <section id="contact" class="py-32 px-6 bg-slate-50">
         <div class="max-w-4xl mx-auto">
-            <div class="bg-slate-900 rounded-[3rem] p-8 md:p-16 text-white shadow-3xl">
+            <div class="bg-slate-900 rounded-[3rem] p-10 md:p-20 text-white shadow-3xl">
                 <div class="max-w-2xl mx-auto">
-                    <h2 class="text-3xl font-bold mb-8 text-center">導入のご相談はこちら</h2>
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold mb-4">お問い合わせ</h2>
+                        <p class="text-slate-400">導入のご相談、デモの依頼、その他ご質問などお気軽にお送りください。</p>
+                    </div>
                     <form action="#" method="POST" class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">会社名</label>
-                                <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-indigo-500 transition-colors">
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">会社名</label>
+                                <input type="text" required placeholder="株式会社サンプル" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-indigo-500 transition-colors">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">お名前</label>
-                                <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-indigo-500 transition-colors">
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">お名前</label>
+                                <input type="text" required placeholder="田中 太郎" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-indigo-500 transition-colors">
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">メールアドレス</label>
-                            <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-indigo-500 transition-colors">
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">メールアドレス</label>
+                            <input type="email" required placeholder="tanaka@example.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-indigo-500 transition-colors">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">お問い合わせ内容</label>
-                            <textarea rows="4" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
+                            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">お問い合わせ内容</label>
+                            <textarea rows="4" required placeholder="ご質問やご要望をご記入ください" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-indigo-600 py-5 rounded-xl font-black text-lg hover:bg-indigo-500 transition-all shadow-xl">メッセージを送信する</button>
+                        <button type="submit" class="w-full bg-indigo-600 py-5 rounded-xl font-black text-xl hover:bg-indigo-500 transition-all shadow-xl shadow-indigo-600/20">メッセージを送信する</button>
                     </form>
                 </div>
             </div>
@@ -214,15 +214,17 @@
     </section>
 
     <footer class="py-20 px-6 border-t border-slate-100 bg-white">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div>
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="text-2xl font-black text-slate-900 tracking-tight">NOAS</span>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="logo.png" alt="NOAS Logo" class="h-8 w-8 rounded">
+                    <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">NOAS</span>
                 </div>
-                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">Nexus of Operations and Sales | 業務・販売連携ネクサス</p>
+                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-[0.25em] leading-none">Nexus of Operations and Sales | 業務・販売連携ネクサス</p>
             </div>
-            <div class="text-slate-400 text-xs">
-                © 2026 NOAS Project. All Rights Reserved.
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <div class="text-slate-400 text-xs font-medium">© 2026 NOAS Project. All Rights Reserved.</div>
+                <div class="text-[10px] text-slate-300 font-mono tracking-widest uppercase">Verified System</div>
             </div>
         </div>
     </footer>
